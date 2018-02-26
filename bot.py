@@ -27,7 +27,6 @@ class RestaurantAPI(object):
     def search(self, info):
         return "papi's pizza place"
 
-
 class ActionSearchRestaurants(Action):
     def name(self):
         return 'action_search_restaurants'
@@ -38,6 +37,15 @@ class ActionSearchRestaurants(Action):
         restaurants = restaurant_api.search(tracker.get_slot("cuisine"))
         return [SlotSet("matches", restaurants)]
 
+class Actioncheckstatus(Action):
+    def name(self):
+        return 'action_check_status'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message("checking data...")
+        restaurant_api = RestaurantAPI()
+        restaurants = restaurant_api.search(tracker.get_slot("cuisine"))
+        return [SlotSet("matches", restaurants)]
 
 class ActionSuggest(Action):
     def name(self):
@@ -68,14 +76,14 @@ def run_rbot_online(input_channel, interpreter,
 
     return agent
 
-def train_dialogue(domain_file="resturant_domain.yml",model_path="models/dialogue",training_data_file="data/babi_stories.md"):
+def train_dialogue(domain_file="mydomain.yml",model_path="models/dialogue",training_data_file="data/mystories.md"):
     agent = Agent(domain_file,policies=[MemoizationPolicy(), RestaurantPolicy()])
     agent.train(training_data_file,max_history=3,epochs=400,batch_size=100,validation_split=0.2)
     agent.persist(model_path)
     # agent.visualize(training_data_file,output_file="graph.png", max_history=2)
     return agent
 
-def train_sdialogue(domain_file="resturant_domain.yml",model_path="models/dialogue1",training_data_file="data/stories1.md"):
+def train_sdialogue(domain_file="mydomain.yml",model_path="models/dialogue1",training_data_file="data/mystories.md"):
     agent = Agent(domain_file,policies=[MemoizationPolicy(), RestaurantPolicy()])
     agent.train(training_data_file,max_history=3,epochs=400,batch_size=100,validation_split=0.2)
     agent.persist(model_path)
@@ -87,7 +95,7 @@ def train_nlu():
     from rasa_nlu.config import RasaNLUConfig
     from rasa_nlu.model import Trainer
 
-    training_data = load_data('data/franken_data.json')
+    training_data = load_data('data/tst.json')
     trainer = Trainer(RasaNLUConfig("nlu_model_config.json"))
     trainer.train(training_data)
     model_directory = trainer.persist('models/nlu/', fixed_model_name="current")
