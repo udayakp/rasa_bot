@@ -16,7 +16,7 @@ slots:
   Issue_in:
     type: text
   inputs:
-    type: text	
+    type: text
   Status:
     type: text
 
@@ -51,7 +51,7 @@ templates:
     - "Bye-bye"
   utter_default:
     - "default message"
-  utter_ack_dosearch: 
+  utter_ack_dosearch:
     - "ok let me see what I can find"
   utter_ack_findalternatives:
     - "ok let me see what else there is"
@@ -60,24 +60,24 @@ templates:
       buttons:
         - title: "thank you"
           payload: "thank you"
-  utter_ask_cuisine: 
+  utter_ask_cuisine:
     - "what kind of cuisine would you like?"
   utter_ask_howcanhelp:
     - "how can I help you?"
   utter_ask_location:
     - "where?"
-  utter_ask_moreupdates: 
+  utter_ask_moreupdates:
     - "if you'd like to modify anything else, please tell me what"
   utter_ask_numpeople:
     - "for how many people?"
-  utter_ask_price: 
+  utter_ask_price:
     - text: "in which price range?"
       buttons:
       - title: "cheap"
         payload: "cheap"
       - title: "expensive"
         payload: "expensive"
-  utter_on_it: 
+  utter_on_it:
     - "I'm on it"
   utter_getreport:
     - "Please enter the report name"
@@ -85,7 +85,7 @@ templates:
     - "Please provide the input details for which you are gettin error"
   utter_statuscheck:
     - "please check the below link and see if this helps"
-  utter_checkrefersh:
+  utter_checkrefresh:
     - "Please rerun the report once and see if you are still facing the issue. If so please provide the inputs"
 
 actions:
@@ -104,6 +104,8 @@ actions:
   - utter_on_it
   - utter_getreport
   - utter_getinput
+  - utter_checkrefresh
+  - utter_statuscheck
   - bot.ActionSearchRestaurants
   - bot.Actioncheckstatus
   - bot.ActionSuggest
