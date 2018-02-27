@@ -17543,6 +17543,240 @@
           }
         ],
         "text": "we will be eight"
+      },
+      {
+        "intent": "Reporting Issue",
+        "entities": [
+          {
+            "start": 3,
+            "end": 16,
+            "value": " BI Dashboard",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 45,
+            "end": 57,
+            "value": "Kronos goals",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 66,
+            "end": 72,
+            "value": "Monday",
+            "entity": "inputs"
+          },
+          {
+            "start": 73,
+            "end": 97,
+            "value": "Kronos- $23007 BI $21260",
+            "entity": "Comparision_Details"
+          }
+        ],
+        "text": "The BI Dashboard is not matching up with the Kronos goals example Monday Kronos- $23007 BI $21260"
+      },
+      {
+        "intent": "Reporting Issue",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Bi dashboard",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "budget",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 24,
+            "end": 41,
+            "value": "Sunday 02/17/2018",
+            "entity": "inputs"
+          }
+        ],
+        "text": "Bi dashboard budget for Sunday 02/17/2018 does not match budgets in Kronos or PMT."
+      },
+      {
+        "intent": "Reporting Issue",
+        "entities": [
+          {
+            "start": 395,
+            "end": 404,
+            "value": "dashboard",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 3,
+            "end": 9,
+            "value": "week 2",
+            "entity": "inputs"
+          },
+          {
+            "start": 10,
+            "end": 27,
+            "value": "budget break down",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 37,
+            "end": 52,
+            "value": "LY retail sales",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 56,
+            "end": 90,
+            "value": "$95,640 and a budget of $115,815. ",
+            "entity": "Comparision_Details"
+          }
+        ],
+        "text": "My week 2 budget break down shows my LY retail sales as $95,640 and a budget of $115,815.  The store finished week 2 with sales of $110,910 which is down to budget but should be up to comp.  On the dashboard it is showing that I came in down -3% to comp for the week.  The dashboard is not correct, is there a way to get this resolved.   I have attached both the budget breakdown as well as the dashboard.  Thank you."
+      },
+      {
+        "intent": "Reporting Issue",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Dashboard",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 47,
+            "end": 54,
+            "value": "2/20/18",
+            "entity": "inputs"
+          },
+          {
+            "start": 64,
+            "end": 80,
+            "value": "instant credits ",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 61,
+            "end": 80,
+            "value": " 2 instant credits ",
+            "entity": "Comparision_Details"
+          }
+        ],
+        "text": "Dashboard and X store numbers do not match up. 2/20/18 we had 2 instant credits yesterday and it is not reflecting the proper results.  I have screen shots to show what we mean."
+      },
+      {
+        "intent": "Access Issue",
+        "entities": [
+          {
+            "start": 2,
+            "end": 14,
+            "value": "domain error",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 28,
+            "end": 38,
+            "value": "every time",
+            "entity": "inputs"
+          }
+        ],
+        "text": "A domain error is coming up every time I try to pull up any numbers."
+      },
+      {
+        "intent": "Reporting Issue",
+        "entities": [
+          {
+            "start": 17,
+            "end": 38,
+            "value": "Credit Card reporting",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 39,
+            "end": 42,
+            "value": "WTD",
+            "entity": "inputs"
+          }
+        ],
+        "text": "When pulling the Credit Card reporting WTD the URCC Application numbers are not matching on the dashboard vs. the Ultamate Rewards Credit Card Report on the POS."
+      },
+      {
+        "intent": "Access Issue",
+        "entities": [
+          {
+            "start": 32,
+            "end": 44,
+            "value": "BI reporting",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 62,
+            "end": 73,
+            "value": " first time",
+            "entity": "inputs"
+          },
+          {
+            "start": 22,
+            "end": 29,
+            "value": " log in",
+            "entity": "Issue_in"
+          }
+        ],
+        "text": "New store is trying to log into BI reporting reporting for the first time and it is saying account information not recognized."
+      },
+      {
+        "intent": "Reporting Issue",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "BI-report",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 64,
+            "end": 76,
+            "value": "credit cards",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 21,
+            "end": 36,
+            "value": "Saturday 2/3/18",
+            "entity": "inputs"
+          }
+        ],
+        "text": "On the BI-report for Saturday 2/3/18 it show that the gm has no credit cards under her name but in the back office the gm had 2 credits for Saturday. Is there away to get this fixed to reflect the right amount of cards. I'm attaching a pic of the screens shits to show the discrepencies"
+      },
+      {
+        "intent": "Reporting Issue",
+        "entities": [
+          {
+            "start": 24,
+            "end": 33,
+            "value": "dashboard",
+            "entity": "Report_Name"
+          },
+          {
+            "start": 4,
+            "end": 16,
+            "value": "sales number",
+            "entity": "Issue_in"
+          },
+          {
+            "start": 87,
+            "end": 102,
+            "value": "Yesterday (2/6)",
+            "entity": "inputs"
+          },
+          {
+            "start": 104,
+            "end": 166,
+            "value": "BI reported sales of $5.83 and Kronos reported sales of $4101.",
+            "entity": "Comparision_Details"
+          }
+        ],
+        "text": "The sales number in the dashboard for sales does not match the sales number in Kronos. Yesterday (2/6), BI reported sales of $5.83 and Kronos reported sales of $4101."
       }
     ],
     "regex_features": [],

@@ -13,7 +13,12 @@ action_names:
 - utter_ask_numpeople
 - utter_ask_price
 - utter_on_it
+- utter_getreport
+- utter_getinput
+- utter_checkrefresh
+- utter_statuscheck
 - action_search_restaurants
+- action_check_status
 - action_suggest
 actions:
 - utter_greet
@@ -29,7 +34,12 @@ actions:
 - utter_ask_numpeople
 - utter_ask_price
 - utter_on_it
+- utter_getreport
+- utter_getinput
+- utter_checkrefresh
+- utter_statuscheck
 - bot.ActionSearchRestaurants
+- bot.Actioncheckstatus
 - bot.ActionSuggest
 config:
   store_entities_as_slots: true
@@ -39,6 +49,10 @@ entities:
 - people
 - price
 - cuisine
+- Report_Name
+- Issue_in
+- inputs
+- Comparision_Details
 intents:
 - greet
 - affirm
@@ -46,11 +60,25 @@ intents:
 - inform
 - thankyou
 - request_info
+- Reporting Issue
+- Access Issue
 slots:
+  Issue_in:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  Report_Name:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  Status:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   cuisine:
     initial_value: null
     type: rasa_core.slots.TextSlot
   info:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  inputs:
     initial_value: null
     type: rasa_core.slots.TextSlot
   location:
@@ -92,8 +120,15 @@ templates:
     - payload: expensive
       title: expensive
     text: in which price range?
+  utter_checkrefresh:
+  - text: Please rerun the report once and see if you are still facing the issue.
+      If so please provide the inputs
   utter_default:
   - text: default message
+  utter_getinput:
+  - text: Please provide the input details for which you are gettin error
+  utter_getreport:
+  - text: Please enter the report name
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye
@@ -101,4 +136,6 @@ templates:
   - text: hey there!
   utter_on_it:
   - text: I'm on it
+  utter_statuscheck:
+  - text: please check the below link and see if this helps
 topics: []
