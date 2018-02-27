@@ -112,6 +112,22 @@ def run(serve_forever=True):
         agent.handle_channel(ConsoleInputChannel())
     return agent
 
+def train():
+    train_nlu()
+    train_dialogue()
+    interpreter = RasaNLUInterpreter("models/nlu/default/current")
+    agent = Agent.load("models/dialogue", interpreter=interpreter)
+    return agent
+
+def pretrained():
+    interpreter = RasaNLUInterpreter("models/nlu/default/current")
+    agent = Agent.load("models/dialogue", interpreter=interpreter)
+    return agent
+
+def respond(agent,message):
+    m = agent.handle_message(message)
+    return m
+    
 
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel="INFO")
